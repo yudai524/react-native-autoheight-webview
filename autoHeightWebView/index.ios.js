@@ -1,19 +1,21 @@
 'use strict'
 
-import React, { PureComponent } from 'react';
+import React, {
+    Component,
+    PropTypes
+} from 'react';
 
 import {
     Animated,
     Dimensions,
     StyleSheet,
     View,
-    ViewPropTypes,
     WebView
 } from 'react-native';
 
-import PropTypes from 'prop-types';
+import ImmutableComponent from 'react-immutable-component';
 
-export default class AutoHeightWebView extends PureComponent {
+export default class AutoHeightWebView extends ImmutableComponent {
     constructor(props) {
         super(props);
         this.handleNavigationStateChange = this.handleNavigationStateChange.bind(this);
@@ -107,7 +109,7 @@ AutoHeightWebView.propTypes = {
     animationDuration: PropTypes.number,
     // offset of rn webview margin
     heightOffset: PropTypes.number,
-    style: ViewPropTypes.style,
+    style: View.propTypes.style,
     // add web/files... to project root
     files: PropTypes.arrayOf(PropTypes.shape({
         href: PropTypes.string,
