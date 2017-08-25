@@ -31,6 +31,6 @@
     "react-immutable-component": "0.0.1"
   },
   "devDependencies": {
-    "react": "16.0.0-alpha.12"
+    "react": "16.0.0-alpha.6"
   }
 }
